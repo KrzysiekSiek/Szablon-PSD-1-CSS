@@ -1,3 +1,82 @@
 /*Reset styli Css*/
 
 /*----------------------- głowy kod strony-------------------*/
+body {
+font: 300 18px/ 1.6em Roboto,Arial, sans-serif;/*1.6 em wyskosc lini 18 * 1.6 okolo 30 px nie na sztywno*/
+color: #7c8ca0;
+font-family: Roboto;
+
+}/*  */
+
+/*Links*/
+
+a {
+  color: #7c8ca0;
+  text-decoration: none; /*  podkreslenie*/
+}
+
+a:hover {
+  opacity: 0.9;/*efekt przyciemnienia po najechaniu  */
+}
+
+/*Images*/
+img {
+  /*width:100%*/
+  height: auto;
+}
+
+/*Grid*/
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*Page Header*/
+
+.page-header {
+  padding: 25px 0;
+  border: 1px solid #e4e6ea;
+
+}
+
+.page-header > .container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ .page-header__brand img{
+   display: block;
+ }
+
+
+/*Menu*/
+.page-header__items li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.page-header__items li {
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.page-header__items li a{
+  padding: 16px 25px;
+  display: inline-block;
+  color: #5d6981;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.page-header__items .active{
+  border-radius: 36px;
+  border: 1px solid #9fabba;
+}
