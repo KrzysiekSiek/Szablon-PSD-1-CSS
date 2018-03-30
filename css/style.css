@@ -42,6 +42,13 @@ img {
 
 }
 
+.page-header__items .page-header__items--fontawesome a {
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+  padding: 0;
+}
+
 .page-header > .container  {
   display: flex;
   justify-content: space-between;
@@ -79,4 +86,15 @@ img {
 .page-header__items .active{
   border-radius: 36px;
   border: 1px solid #9fabba;
+}
+
+/*Menu icon*/
+
+
+.facebook--icon {
+
+}
+
+.twitter--icon {
+
 }
