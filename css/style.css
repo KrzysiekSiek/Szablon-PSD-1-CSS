@@ -35,9 +35,7 @@ img {
 	color: #fff;
 }
 
-.btn-default {
 
-}
 
 /* Grid */
 .container {
@@ -150,6 +148,7 @@ img {
 	width: 100%;
 	margin: 0 auto;
 	background: url('../img/message-icon.png') no-repeat left 55px,  url('../img/light-icon.png') no-repeat right 55px;
+
 }
 
 /* Intro Video Image*/
@@ -162,6 +161,8 @@ img {
 	width:100%;
 	margin: 0 auto;
 	position: relative;
+
+
 }
 
 .intro-section__intro-video__image .btn {
@@ -172,6 +173,8 @@ img {
 /* Sekcja feature boxes*/
 .intro-section__feature-boxes{
  margin: auto;
+
+
 }
 
 .intro-section__feature-boxes > .container{
@@ -188,7 +191,7 @@ img {
 
 .intro-section__feature-boxes__box img {
 	margin-bottom: 15px;
-
+  height: 90px;
 
 }
 
@@ -204,6 +207,7 @@ img {
 
 .intro-section__feature-boxes p {
 	margin: 0;
+	margin-bottom: 134px;
 }
 
 /* footer*/
@@ -216,3 +220,5 @@ img {
 	margin: 0;
 
 }
+
+/*sekcion obrazek*/
