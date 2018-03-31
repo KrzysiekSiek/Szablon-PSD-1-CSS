@@ -1,1 +1,0 @@
-# Szablon-PSD-1-CSS
