@@ -25,7 +25,7 @@ img {
 	color: #0149a1;
 	background: #fff;
 	font-size: 18px;
-	line-height: 2.6em;
+	line-height: 1.2em;
 	font-weight: 700;
 	border-radius: 30px;
 }
@@ -111,6 +111,10 @@ img {
 
 /* Page section */
 
+.page-section {
+  background-image: linear-gradient(to top, #edeff1 0%, #edeff1 1%, #ffffff 24%, #e2e4e8 31%, #ffffff 100%);
+}
+
 /* Section header */
 .intro-section__section-header {
 	text-align: center;
@@ -136,4 +140,79 @@ img {
 .intro-section__intro-cta {
 	text-align: center;
 	margin-top: 105px;
+	margin-bottom: 115px;
+}
+
+/* Intro Video */
+
+.intro-section__intro-video{
+	max-width: 1330px;
+	width: 100%;
+	margin: 0 auto;
+	background: url('../img/message-icon.png') no-repeat left 55px,  url('../img/light-icon.png') no-repeat right 55px;
+}
+
+/* Intro Video Image*/
+
+.intro-section__intro-video__image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1094px;
+	width:100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.intro-section__intro-video__image .btn {
+	position: absolute;
+	margin-top: -50px;
+}
+
+/* Sekcja feature boxes*/
+.intro-section__feature-boxes{
+ margin: auto;
+}
+
+.intro-section__feature-boxes > .container{
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.intro-section__feature-boxes__box{
+	flex-basis: 23%;
+	text-align: center;
+}
+
+.intro-section__feature-boxes__box img {
+	margin-bottom: 15px;
+
+
+}
+
+.intro-section__feature-boxes h3 {
+	margin-top: 20px
+	margin-bottom: 25px;
+	color: #5d6981;
+	font-family: Roboto;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 48px;
+}
+
+.intro-section__feature-boxes p {
+	margin: 0;
+}
+
+/* footer*/
+.page-footer {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.page-footer p {
+	margin: 0;
+
 }
