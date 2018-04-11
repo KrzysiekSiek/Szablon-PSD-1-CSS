@@ -1,0 +1,228 @@
+// Naglowki
+@mixin header-mixin ($font-size,$font-weight) {
+	font-size: $font-size;
+	font-weight: $font-weight;
+}
+
+// Duze litery
+.upper {
+	text-transform: uppercase;
+}
+
+// Wyrownanie, pozycjonowanie itp.
+.center-text {
+	text-align: center;
+}
+
+.v-align {
+	vertical-align: middle;
+}
+
+.absolute-one-hundred-size {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.inline-block {
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+}
+
+.block {
+	display: block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.v-align-transform {
+	@extend .relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Padding dol gora
+@mixin padding-top-bottom($p-top,$p-bottom) {
+	padding: $p-top 0 $p-bottom;
+}
+
+// Ramki
+@mixin basic-border($width,$style,$color: $border-color) {
+	border-width: $width;
+	border-style: $style;
+	border-color: $color;
+}
+
+// Akapity
+@mixin paragraph($font-size: $font-size-base,$line-height:$line-height-base,$color:$paragraph-color) {
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $paragraph-color;
+}
+
+// Listy
+.list-style-none {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+// ikony
+@mixin icon-span-round($dimension) {
+	@extend .inline-block;
+	border-radius: 50%;
+	@extend .center-text;
+	width: $dimension;
+	height: $dimension;
+}
+
+@mixin icon($color,$font-size,$line-height: $line-height-base) {
+	color: $color;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+// Overlay
+.dark-overlay {
+	content: "";
+	z-index: 0;
+	background: none repeat rgba(30,30,30,0.5);
+	@extend .absolute-one-hundred-size;
+}
+
+// Cien
+@mixin shadow($properties) {
+	box-shadow: $properties;
+}
+
+// linia
+.section-line-mix {
+	//background: $section-line-color;
+	content: "";
+	height: 2px;
+	margin-top: 10px;
+	width: 45%;
+	@media xs {
+		width: 48%;
+	}
+}
+
+
+//Auto marginesy
+@mixin margin-auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// przejscia
+.basic-transition {
+	transition: all 0.2s ease-in-out;
+}
+
+// flexbox
+.flex-display {
+	display: flex;
+	display: -ms-flexbox;
+}
+
+.flex-justify {
+	justify-content: space-between;
+	-ms-flex-pack: justify;
+}
+
+.flex-align {
+	align-items: center;
+	-ms-flex-align: center;
+}
+
+// Obrazy slidera
+@mixin bg-image($url) {
+	background-image: $url;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+// Hover dla przyciskow
+@mixin button-variant($color,$background,$border) {
+	&:hover {
+		background-color: darken($background, 5%);
+		border-color: transparent;
+	}
+}
+
+// Motyw kolorsytyczny
+@mixin theme($name, $color) {
+  $primary: $color;
+  $secondary: lighten($color, 10%);
+  .#{$name} {
+    body {
+      color: $primary;
+    }
+    section {
+      background: $secondary;
+    }
+  }
+
+}
+
+// Wyśrodkowanie całkowite na 3 sposoby pion poziom całkowite
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//Gradient
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}

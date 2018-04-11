@@ -1,0 +1,53 @@
+$screen-xs-max: 425px;  // Małe telefony
+
+$screen-sm-min: 425.02px; // Małe tablety i telefony w poziomie
+$screen-sm-max: 576px;
+
+$screen-md-min: 576.02px;  // Większe urządzenia
+$screen-md-max: 768px;
+
+$screen-lg-min: 768.02px;// Tablety
+$screen-lg-max: 1024px;
+
+$screen-xl-min: 1024.02px; // Ekrany laptopów i PC
+$screen-xl-max: 1440px;
+
+$screen-xxl-min: 1440.02px; // Ekrany o dużej rodzielczości
+
+// Mixins
+@mixin xs { @media (max-width: #{$screen-xs-max})  {@content;} } // Tiny devices
+@mixin sm { @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {@content;} } // Small devices
+@mixin md { @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {@content;} } // Medium devices
+@mixin lg { @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {@content;} } // Large devices
+@mixin xl { @media (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {@content;} } // Extra large devicie
+@mixin xxl { @media (min-width: #{$screen-xxl-min}) {@content;} } // Extra extra large devices
+
+
+//Kontener grid
+
+.container {
+   @include xs{
+    //background: red;
+    max-width: none;
+   }
+   @include sm{
+   //background: blue;
+   max-width: 540px;
+   }
+   @include md {
+    //background: green;
+    max-width: 720px;
+   }
+   @include lg {
+    //background: black;
+    max-width: 960px;
+   }
+   @include xl {
+    //background: yellow;
+    max-width: 1140px;
+   }
+   @include xxl{
+    //background: grey;
+    max-width: 1400px;
+   }
+}
